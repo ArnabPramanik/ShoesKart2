@@ -142,7 +142,13 @@
 
 	</div>
 </div>
+<c:if test = "${cartList.size() == 0}">
+<h6 align = "center"><i>Cart is empty.</i></h6>
+</c:if>
 <a class="btn btn-danger" href = "/ShoesKartFrontend/user/home">Continue Shopping</a>
+<c:if test = "${cartList.size() != 0}">
 <a class = "btn btn-danger" href = "/ShoesKartFrontend/user/checkout">Purchase</a>
+</c:if>
+
 </body>
 </html>

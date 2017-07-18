@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html"%>
-
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
@@ -99,7 +99,7 @@
 	</div>
 
 
-
+<form:form modelAttribute = "checkout">
 	<div class="container">
 		<div class="table-responsive">
 			<table class="table">
@@ -116,7 +116,8 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${cartList}" var="cartItem">
+				
+					<c:forEach items="${checkout.cartList}" var="cartItem">
 						<tr>
 							<td><img
 								src="<c:url value = "/assets/images/${cartItem.prodname}.jpg"/>"
@@ -134,9 +135,11 @@
 
 		</div>
 	</div>
+	</form:form>
 	<br /> GrandTotal = ${grandtotal}
 	<br />
-	<form action="/ShoesKartFrontend/user/payment" method="POST">
+	<form  method="POST" >
+	
 		payment type
 		<div class="radio">
 			<label><input type="radio" name="optradio">Cash</label>
@@ -146,7 +149,7 @@
 				Card</label>
 		</div>
 		shipping address<input type="text" name="shipping" required /> <input
-			type="submit" value="payment " name="submit" />
+			type="submit" value="payment " name="_eventId_submit" />
 	</form>
 </body>
 </html>

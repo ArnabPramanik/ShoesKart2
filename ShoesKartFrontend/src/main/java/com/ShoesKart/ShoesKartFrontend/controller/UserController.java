@@ -215,7 +215,7 @@ public class UserController {
 		
 	}
 	
-	@RequestMapping("/checkout")
+/*	@RequestMapping("/checkout")
 	public String checkout(Model m,HttpSession session)
 	{
 		
@@ -236,9 +236,9 @@ public class UserController {
 		m.addAttribute("grandtotal",grandtotal);
 		m.addAttribute("cartList",cartList);
 		
-		return "/checkout";
+		return "checkout";
 	}
-	
+	*/
 	@RequestMapping("/payment")
 	public String paymentProcess(Model m, HttpSession session){
 		String username=(String) session.getAttribute("username");
