@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html"%>
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <html lang="en">
 <head>
 <title>HomePage</title>
@@ -202,27 +203,7 @@ div.section>div>input {
 }
 </style>
 <body>
-	<div class="container-fluid">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="index">ShoesKart</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li><a href="index">Home</a></li>
-					<li><a href="/ShoesKartFrontend/login">Sign In</a></li>
-					<li><a href="/ShoesKartFrontend/signup">Sign Up</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/ShoesKartFrontend/product"> Products</a></li>
-					<li><a href="/ShoesKartFrontend/contactus"> Contact Us</a></li>
-					<li><a href="/ShoesKartFrontend/aboutus"> About Us</a></li>
-				</ul>
-
-			</div>
-		</nav>
-	</div>
-
+	<%@ include file = "navbar.jsp" %>
 
 	<div class="container">
 		<div class="row">

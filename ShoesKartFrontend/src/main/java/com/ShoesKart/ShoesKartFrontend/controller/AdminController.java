@@ -41,13 +41,13 @@ public class AdminController {
 	@RequestMapping("/contactus")
 	public String viewContact(){
 		
-		return "admincontact";
+		return "contact";
 	}
 	
 	@RequestMapping("/aboutus")
 	public String vieeweAbout(){
 		
-		return "adminabout";
+		return "about";
 	}
 	@RequestMapping("/category")
 	public String viewCategory(Model m)

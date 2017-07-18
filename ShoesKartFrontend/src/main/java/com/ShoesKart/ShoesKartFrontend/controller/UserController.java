@@ -38,13 +38,13 @@ public class UserController {
 	@RequestMapping("/contactus")
 	public String viewContact(){
 		
-		return "usercontact";
+		return "contact";
 	}
 	
 	@RequestMapping("/aboutus")
 	public String vieeweAbout(){
 		
-		return "userabout";
+		return "about";
 	}
 	@RequestMapping("/product")
 	public String showProduct(Model m) {
@@ -52,7 +52,7 @@ public class UserController {
 		List<Product> products = productDao.getAll();
 		m.addAttribute("prodList", products);
 
-		return "userproduct";
+		return "product";
 	}
 
 	@RequestMapping("/home")
@@ -64,7 +64,7 @@ public class UserController {
 	public String viewProduct(@PathVariable("prodId") int prodId, Model m) {
 		m.addAttribute("product", productDao.getById(prodId));
 
-		return "userproductfocus";
+		return "productfocus";
 	}
 
 	@RequestMapping("/product/addtocart/{prodid}")

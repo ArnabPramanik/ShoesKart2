@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <html lang="en">
 <head>
 <title>HomePage</title>
@@ -12,8 +12,6 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
-
-  
 .navbar {
 	background-color: #ff0000;
 	padding-top: 10px;
@@ -105,43 +103,31 @@
 .carousel-inner>.item>img {
 	margin: 0 auto;
 }
+
 .open .dropdown-toggle {
-      color: yellow;
-      background-color: black !important;
-  }
-  .close .dropdown-toggle {
-      color: white;
-      background-color: black !important;
-  }
- .dropdown-menu li a {
-      color: black !important;
-      background-color:white;
-  }
-  .dropdown-menu li a:hover {
-      background-color: red !important;
-  }
+	color: yellow;
+	background-color: black !important;
+}
+
+.close .dropdown-toggle {
+	color: white;
+	background-color: black !important;
+}
+
+.dropdown-menu li a {
+	color: black !important;
+	background-color: white;
+}
+
+.dropdown-menu li a:hover {
+	background-color: red !important;
+}
 </style>
 <body>
-	<div class="container-fluid">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="index">ShoesKart</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li><a href="index">Home</a></li>
-					<li><a href="/ShoesKartFrontend/login">Sign In</a></li>
-					<li><a href="/ShoesKartFrontend/signup">Sign Up</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/ShoesKartFrontend/product"> Products</a></li>
-					<li><a href="/ShoesKartFrontend/contactus"> Contact Us</a></li>
-					<li><a href="/ShoesKartFrontend/aboutus"> About Us</a></li>
-				</ul>
-
-			</div>
-		</nav>
-	</div>
+	
+	<%@ include file = "navbar.jsp" %>
+	
+	
 	<!--Carousel -->
 	<div class="container-fluid">
 		<div id="Carousel" class="carousel slide" data-ride="carousel">
@@ -158,26 +144,24 @@
 			<div class="carousel-inner bg">
 				<div class="item active">
 					<img src="assets/images/shoesRack.jpg" alt="Option 1"
-						style="width: 40%; height: 50%">
+						style="width: 400px; height: 400px">
 				</div>
 				<div class="item">
 					<img src="assets/images/10-percent-off.jpg" alt="Option 2"
-						style="width: 50%; height: 50%">
+						style="width: 400px; height: 200px">
 				</div>
 				<div class="item">
 					<img src="assets/images/shoesonBench.jpg" alt="Option 3"
-						style="width: 35%; height: 50%">
+						style="width: 400px; height: 300px">
 				</div>
 				<div class="item">
 					<img src="assets/images/shoes4.jpg" alt="Option 4"
-						style="width: 20%; height: 50%">
+						style="width: 200px; height: 200px">
 				</div>
 				<div class="item">
 					<img src="assets/images/shoesonleg.jpg" alt="Option 5"
-						style="width: 20%; height: 50%">
+						style="width: 200px; height: 200px">
 				</div>
-
-			</div>
 
 			<a class="left carousel-control" href="#Carousel" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left"></span> <span
@@ -188,10 +172,11 @@
 			</a>
 		</div>
 	</div>
+</div>
 
 	<div class="container-fluid bg-5">
 		<img src="assets/images/welcome2.png" class="img-responsive margin"
-			style="width: 50%; height: 10%" alt="Image">
+			style="width: 400px; height: 150px" alt="Image">
 
 	</div>
 

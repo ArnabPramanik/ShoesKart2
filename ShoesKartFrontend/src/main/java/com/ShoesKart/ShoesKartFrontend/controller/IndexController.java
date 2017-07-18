@@ -97,7 +97,7 @@ public class IndexController {
 	}
 	@RequestMapping("/login_success")
 	public String loginSuccess(HttpSession session){
-		System.out.println("loded successfully");
+		System.out.println("loaded successfully");
 		
 
 		   String username= SecurityContextHolder.getContext().getAuthentication().getName();
@@ -109,17 +109,17 @@ public class IndexController {
 			Collection<GrantedAuthority> authorities =(Collection<GrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
 		  for(GrantedAuthority role:authorities)
 			{
-			  System.out.println("Role:"+role.getAuthority()+"username"+username);
+			  System.out.println("Role: "+role.getAuthority()+" username "+username);
 				
 			  
 			if(role.getAuthority().equals("administrator"))
 			{
 				
-			return "adminhome";
+			return "index";
 			}
 			else
 			{
-			return "userhome";
+			return "index";
 			}
 			}
 		return "index";
