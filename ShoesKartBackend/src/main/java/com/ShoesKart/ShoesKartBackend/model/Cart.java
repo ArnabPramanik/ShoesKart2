@@ -1,11 +1,13 @@
 package com.ShoesKart.ShoesKartBackend.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Cart {
+public class Cart implements Serializable {
 	@Id
 	@GeneratedValue
     int cartitemid;
