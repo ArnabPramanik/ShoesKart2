@@ -4,7 +4,7 @@
 <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <html>
 <head>
-<title>HomePage</title>
+<title>Checkout</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -63,7 +63,7 @@
 	
 		payment type
 		<div class="radio">
-			<label><input type="radio" name="optradio">Cash</label>
+			<label><input type="radio" name="optradio" required = "required">Cash</label>
 		</div>
 		<div class="radio">
 			<label><input type="radio" name="optradio">Credit

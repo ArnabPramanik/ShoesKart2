@@ -169,7 +169,7 @@ public class AdminController {
 	@RequestMapping("/product/add")
 	public String addProduct(@ModelAttribute("product") Product product,HttpServletRequest request){
 		
-		String path = "C:\\Users\\ARNAB\\git\\ShoesKartFrontend\\src\\main\\webapp\\assets\\images\\";
+		String path = "C:\\Users\\ARNAB\\NewGit\\ShoesKartFrontend\\src\\main\\webapp\\assets\\images\\";
 		String fileinfo = path + product.getName() + ".jpg";
 		File f = new File(fileinfo);
 		if(!product.getPimage().isEmpty()){

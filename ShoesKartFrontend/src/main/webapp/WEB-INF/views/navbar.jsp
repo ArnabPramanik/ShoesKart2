@@ -32,7 +32,7 @@
 				<security:authorize access="hasAuthority('user')">
 					<li><a href="/ShoesKartFrontend/user/product"> Products</a></li>
 					<li><a href="/ShoesKartFrontend/user/cart"> Cart</a></li>
-					<li><a href="/ShoesKartFrontend/user/product"> Products</a></li>
+
 					<li><a href="/ShoesKartFrontend/user/contactus"> Contact Us</a></li>
 					<li><a href="/ShoesKartFrontend/user/aboutus"> About Us</a></li>
 				</security:authorize>

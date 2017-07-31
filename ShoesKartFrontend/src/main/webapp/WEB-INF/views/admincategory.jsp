@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <head>
-<title>HomePage</title>
+<title>AdminCategory</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
